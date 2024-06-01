@@ -1,0 +1,76 @@
+
+.profile_pic{
+    height: 20%;
+}
+.title-s{
+    font-weight: bold;
+}
+.success{
+    color:chartreuse;
+}
+.lead{
+    text-align: justify;
+}
+.specialization {
+    font-weight: 400;
+}
+.connect{
+    font-weight: 500 ;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+.popisek{
+    color: chartreuse;
+}
+.connect {
+    margin: 5rem 0 5rem 0;
+}
+@media (max-width: 768px) {
+    .connect{
+        font-size: 2rem;
+    }
+    .skill-mf{
+        padding-top: 3rem;
+    }
+}
+@media (min-width: 768px) {
+    .lead{
+        font-size: 1.5rem;
+    }
+}
+.card-1{
+        background-image: url("./assets/control\ of\ power\ supply.jpg");
+    }
+.card-2{
+    background-image: url("./assets/accsaver.PNG");
+}
+.card-3{
+    background-image: url("./assets/tindog.jpg");
+}
+.card-4{
+    background-image: url("./assets/moveit.jpg");
+}
+
+
+
+#skills {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.skill {
+    margin: 20px 0;
+}
+
+.number {
+    font-size: 1em;
+    color: #007BFF;
+    transition: font-size 0.5s;
+}
+
+.progress-bar {
+    transition: width 1s ease;
+}
