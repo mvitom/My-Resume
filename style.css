@@ -5,8 +5,8 @@
 .title-s{
     font-weight: bold;
 }
-.success{
-    color:chartreuse;
+h2 > .success{
+    color:#0d6efd;
 }
 .lead{
     text-align: justify;
@@ -23,7 +23,7 @@
     font-weight: bold;
 }
 .popisek{
-    color: chartreuse;
+    color: white;
 }
 .connect {
     margin: 5rem 0 5rem 0;
@@ -41,21 +41,10 @@
         font-size: 1.5rem;
     }
 }
-.card-1{
+/* .card-1{
         background-image: url("./assets/control\ of\ power\ supply.jpg");
     }
-.card-2{
-    background-image: url("./assets/accsaver.PNG");
-}
-.card-3{
-    background-image: url("./assets/tindog.jpg");
-}
-.card-4{
-    background-image: url("./assets/moveit.jpg");
-}
-
-
-
+*/
 #skills {
     text-align: center;
     margin: 50px 0;
@@ -74,3 +63,107 @@
 .progress-bar {
     transition: width 1s ease;
 }
+/* HTML: <div class="loader"></div> */
+.loader {
+    height: 15px;
+    border-radius: 1px;
+    color: var(--bs-green);
+    /* border: 2px solid; */
+    position: relative;
+    margin: 2px;
+    
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: l6 4s ease-in infinite;
+  }
+  @keyframes l6 {
+      100% {inset:0}
+  }
+
+
+  .row-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 500px)); /* Use auto-fill for dynamic number of columns */
+    grid-template-rows: 300px 300px;
+    gap: 50px;
+}
+
+@media (max-width: 1200px) {
+    .row-grid {
+        grid-template-columns: minmax(250px,500px); /* Change to single column layout */
+    }
+    #projects .card:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+}
+@media (max-width: 450px){
+
+}
+.card p{
+    font-size: 1.1rem;
+}
+#projects .card {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width:1201px){
+    #projects .card:hover {
+    transform: scale(1.3);
+    z-index: 1;
+}}
+
+#projects .card .content {
+    padding: 20px;
+    background: #0d6efd;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#projects .video,#projects .img-onhover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+@media (max-width:450px){
+    #projects .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+}   .img-card{
+    height: 60%;
+    /* position: absolute; */
+}
+}
+#projects .card:hover .video, #projects .card:hover .img-onhover {
+    opacity: 1;
+}
+@media(min-width:451px){
+    .img-card{
+    height: 60%;
+    object-fit:contain;
+}}

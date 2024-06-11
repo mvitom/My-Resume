@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const progressBar = progressBars[index];
             const updateCount = () => {
                 const count = +number.innerText.replace('%', '');
-                const increment = target / 250; // Adjust this for speed
+                const increment = target / 250; //speed
 
                 if (count < target) {
                     number.innerText = Math.ceil(count + increment) + '%';
                     progressBar.style.width = Math.ceil(count + increment) + '%';
-                    setTimeout(updateCount, 10); // Adjust this for speed
+                    setTimeout(updateCount, 10); //speed
                 } else {
                     number.innerText = target + '%';
                     progressBar.style.width = target + '%';
@@ -48,5 +48,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', checkScroll);
-    window.addEventListener('load', checkScroll); // To check on load if the section is already in view
+    window.addEventListener('load', checkScroll); //check on load if the section is already in view
+});
+
+
+ //VIDEO
+
+ document.querySelectorAll('#projects .card').forEach(card => {
+    const video = card.querySelector('.video');
+
+    card.addEventListener('mouseover', () => {
+        video.play();
+    });
+
+    card.addEventListener('mouseout', () => {
+        video.pause();
+        video.currentTime = 0; // Reset video to start
+    });
 });
