@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-    
-  
+
     function loadNumbers() {
         skillNumbers.forEach((number, index) => {
             const target = +number.getAttribute('data-target');
