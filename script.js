@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
   
     function checkScroll() {
         const rect = skillsSection.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        const buffer = 200; // Adjust this value as needed to load numbers earlier
+    
+        if (rect.top < (window.innerHeight || document.documentElement.clientHeight) - buffer && 
+            rect.bottom > buffer) {
             if (!hasScrolled) {
                 loadNumbers();
                 hasScrolled = true;
@@ -19,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+    
   
     function loadNumbers() {
         skillNumbers.forEach((number, index) => {
